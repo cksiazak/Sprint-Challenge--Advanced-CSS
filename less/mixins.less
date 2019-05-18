@@ -13,8 +13,15 @@
 
 .btn-style(@btnbackground, @btncorners){
     cursor: pointer;
-    color: white;
+    color: @wild-sand;
     border: none;
     background: @btnbackground;
     border-radius: @btncorners;
+
+    transition: .3s;
+
+    &:hover {
+        background: @wild-sand;
+        color: @btnbackground;
+    }
 }

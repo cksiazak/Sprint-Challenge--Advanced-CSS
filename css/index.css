@@ -273,13 +273,18 @@ footer {
   width: 29%;
   height: 100%;
   cursor: pointer;
-  color: white;
+  color: #F6F6F6;
   border: none;
   background: #23293B;
   border-radius: 5px;
+  transition: 0.3s;
   font-size: 1.75rem;
   padding: 5px;
   font-weight: bold;
+}
+.home .walk .walk-text .btn button:hover {
+  background: #F6F6F6;
+  color: #23293B;
 }
 @media (max-width:600px) {
   .home .walk .walk-text .btn button {
