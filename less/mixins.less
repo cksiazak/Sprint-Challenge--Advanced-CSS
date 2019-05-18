@@ -25,3 +25,27 @@
         color: @btnbackground;
     }
 }
+
+.changinganimation {
+    animation-name: colors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    @keyframes colors {
+        25% {
+            color: @river-bend;
+        }
+        50% {
+            color: @shuttle-gray;
+            transform: scale(1.03);
+            letter-spacing: .05rem;
+        }
+        75% {
+            color: @waterloo;
+        }
+        100% {
+            color: @btn-bg-color;
+        }
+    }
+}
