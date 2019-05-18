@@ -1,3 +1,4 @@
+@mobile (max-width:500px);
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -238,11 +239,16 @@ footer {
   margin-bottom: 26px;
 }
 .home .walk .walk-text .btn button {
+  width: 29%;
+  height: 100%;
   cursor: pointer;
   color: white;
   border: none;
   background: #23293B;
-  border-radius: 2px;
+  border-radius: 5px;
+  font-size: 1.75rem;
+  padding: 5px;
+  font-weight: bold;
 }
 .home .walk .walk-img {
   width: 46%;
