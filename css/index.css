@@ -1,3 +1,25 @@
+.changinganimation {
+  animation-name: colors;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes colors {
+  25% {
+    color: #454A59;
+  }
+  50% {
+    color: #5E6164;
+    transform: scale(1.03);
+    letter-spacing: 0.05rem;
+  }
+  75% {
+    color: #81848E;
+  }
+  100% {
+    color: #22283A;
+  }
+}
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -170,6 +192,26 @@ nav {
 nav h1 {
   font-size: 4rem;
   padding: 14px 0%;
+  animation-name: colors;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes colors {
+  25% {
+    color: #454A59;
+  }
+  50% {
+    color: #5E6164;
+    transform: scale(1.03);
+    letter-spacing: 0.05rem;
+  }
+  75% {
+    color: #81848E;
+  }
+  100% {
+    color: #22283A;
+  }
 }
 nav .nav-links {
   width: 30%;
@@ -182,10 +224,36 @@ nav .nav-links {
   }
 }
 nav .nav-links a {
+  display: block;
+  white-space: nowrap;
   padding: 6px 0% 9px;
   font-size: 1.6rem;
   text-decoration: none;
   color: #454A59;
+  transition: 0.5s;
+}
+nav .nav-links a::before {
+  content: "[";
+  padding-right: 10%;
+  opacity: 0;
+}
+nav .nav-links a::after {
+  content: "]";
+  padding-left: 10%;
+  opacity: 0;
+}
+nav .nav-links a:hover {
+  transform: scale(1.1);
+}
+nav .nav-links a:hover::before {
+  content: "[";
+  padding-right: 10%;
+  opacity: 0.9;
+}
+nav .nav-links a:hover::after {
+  content: "]";
+  padding-left: 10%;
+  opacity: 0.9;
 }
 footer {
   color: #22283B;
