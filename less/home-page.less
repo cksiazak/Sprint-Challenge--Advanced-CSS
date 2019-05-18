@@ -63,8 +63,21 @@
     display: flex;
     justify-content: center;
 
+    @media @mobile {
+      margin-top: 0px;
+      padding: 20px 0px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @mobile {
+        width: 95%;
+        padding-top: 10px;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -81,8 +94,15 @@
         font-size: 1.75rem;
         padding: 5px;
         font-weight: bold;
+
+        @media @mobile {
+          width: 100%;
+          height: 75px;
+        }
       
       }
+
+
     }
 
     .walk-img {
@@ -93,6 +113,10 @@
         width: 100%;
         height: auto;
         border-radius: 10px;
+      }
+      @media @mobile {
+        margin-left: 0%;
+        width: 95%;
       }
     }
   }
