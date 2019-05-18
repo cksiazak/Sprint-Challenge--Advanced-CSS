@@ -1,1 +1,51 @@
 // Mixins Here
+
+.flexycentercolumn(){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textnormalizer(){
+    text-decoration: none;
+    color: @river-bend;
+}
+
+.btn-style(@btnbackground, @btncorners){
+    cursor: pointer;
+    color: @wild-sand;
+    border: none;
+    background: @btnbackground;
+    border-radius: @btncorners;
+
+    transition: .3s;
+
+    &:hover {
+        background: @wild-sand;
+        color: @btnbackground;
+    }
+}
+
+.changinganimation {
+    animation-name: colors;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    @keyframes colors {
+        25% {
+            color: @river-bend;
+        }
+        50% {
+            color: @shuttle-gray;
+            transform: scale(1.03);
+            letter-spacing: .05rem;
+        }
+        75% {
+            color: @waterloo;
+        }
+        100% {
+            color: @btn-bg-color;
+        }
+    }
+}
